@@ -1,8 +1,8 @@
 // Room notes: edit freely, the page renders from this object.
 export const R={
  court:{name:"Front courtyard",zone:"East, in front of the main door",f:"x",
-  now:["Opaque tin roof shades the main door and both east windows for most of the day","The big tree over the north half adds more shade","Cement bags, clothes lines and black metal sheets crowd the parking side"],
-  fix:["Swap the 4–6 sheets nearest the house for translucent polycarbonate (₹5,000–12,000)","Trim the tree crown back from the roof and gate","Clear the cement bags; dry clothes in the open, sunny part","Take down the black sheets if the neighbour side allows"],
+  now:["Opaque tin roof shades the main door and both east windows for most of the day","The big tree over the north half adds more shade","A tall black board above the front wall, south of the gate, blocks the morning sun","Cement bags and clothes lines crowd the parking side"],
+  fix:["Swap the 4–6 sheets nearest the house for translucent polycarbonate (₹5,000–12,000)","Trim the tree crown back from the roof and gate","Clear the cement bags; dry clothes in the open, sunny part","Take down the black board above the front wall (free, and the biggest light gain after the roof)"],
   vastu:"Classical texts like the Mayamata and Manasara treat the east as the side to keep open to sunrise. Letting morning light through here is the biggest single win, practically and traditionally."},
  hall:{name:"Hall",zone:"South-east of the house",f:"g",
   now:["One bare bulb for about 110 sq ft","Around 10 frames and posters on one wall","Curtain hung in the arch to the kitchen"],
@@ -34,14 +34,14 @@ export const R={
   now:["Narrow and tin-roofed, between the house and the tall neighbouring building","The kitchen and hall south windows open onto it, so little light gets in","Clothes, basins and boards stored along it"],
   fix:["Swap the roof sheets over the kitchen and hall windows for clear polycarbonate (₹3,000–6,000)","Keep it clear so air can move through the south windows","Dry clothes on the sunny terrace instead"],
   vastu:"The tall building to the south also shades the house at midday in winter. Move the time slider to 12 pm to see it."},
- study:{name:"Your study",zone:"Upstairs, above the hall",f:"u",
+ study:{name:"Your room",zone:"Upstairs, over the hall and kitchen",f:"u",
   now:["Laptop work often ends up on the bed","Single bulb"],
   fix:["Desk at the east window so you face east while working","Desk lamp plus one LED batten (₹1,000–1,800)","Keep the bed for sleep only"],
   vastu:"Facing east or north while studying is common traditional guidance, and the east window here makes it easy."},
- room2:{name:"Upstairs room 2",zone:"Above half the kitchen",f:"u",
+ room2:{name:"Upstairs room 2",zone:"Upstairs, west end",f:"u",
   now:["Size and use estimated from your description"],fix:["A good place for storage moved out of the bedroom lofts"],vastu:""},
  upwash:{name:"Upstairs washroom",zone:"North-west, above the one below",f:"u",
   now:["Not photographed; drawn the same size as below"],fix:["Fit an exhaust when you do the downstairs ones"],vastu:""},
- terrace:{name:"Terrace",zone:"Roof over the bedroom and half the kitchen",f:"u",
-  now:["Open roof reached from the outside stairs"],fix:["The sunniest place to dry clothes instead of indoors"],vastu:""}
+ terrace:{name:"Terrace",zone:"Open roof over the bedroom and utility",f:"u",
+  now:["Open roof; the passage from the stairs runs along it to your door"],fix:["The sunniest place to dry clothes instead of indoors"],vastu:""}
 };
