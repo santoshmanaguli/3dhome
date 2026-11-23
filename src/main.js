@@ -115,9 +115,9 @@ const slab1=bx(-.25,10,-.25,24.45,10.5,21.65,slab1M,G.site);
 
 /* upstairs */
 const y0=10.5,uw=(ax,c,a,b,ops,h)=>wall(G.u,ax,c,a,b,ops,h||9,y0);
-uw("x",12.3,-.25,24.45,[[3,5.5,0,7,"d"],[19,22,0,7,"d"]]);uw("z",24.2,12.3,21.4,[[14,18,3,7,"w"]]);uw("x",21.4,-.25,24.45,[[3,6.5,3,7,"w"],[14,18,3,7,"w"]]);
-uw("z",0,12.3,21.4,[[15,18.5,3,7,"w"]]);uw("z",10,12.3,21.4,[]);
-uw("x",0,-.25,6.25,[[2,3.5,5,6.5,"w"]]);uw("z",0,0,10.3,[]);uw("x",10.3,-.25,6.25,[]);uw("z",6,0,10.3,[[4,6.5,0,7,"d"]]);
+uw("x",12.3,-.25,24.45,[[19,22,0,7,"d"]]);uw("z",24.2,12.3,21.4,[[12.8,16.3,3,7,"w"],[17.6,20.3,0,7,"d"]]);uw("x",21.4,-.25,24.45,[[3,6.5,3,7,"w"],[14,18,3,7,"w"]]);
+uw("z",0,12.3,21.4,[[15,18.5,3,7,"w"]]);uw("z",10,12.3,21.4,[[15.5,18.2,0,7,"d"]]);
+uw("x",0,-.25,6.25,[[2,3.5,5,6.5,"w"]]);uw("z",0,0,10.3,[]);uw("x",10.3,-.25,6.25,[[.5,2.6,0,7,"d"],[3.4,5.5,0,7,"d"]]);uw("z",6,0,10.3,[]);uw("z",3,0,10.3,[]);
 uw("x",0,6,24.45,[],3);uw("z",24.2,0,12.3,[],3);
 fl("study",10,12.3,24.2,21.4,y0,G.u);fl("room2",0,12.3,10,21.4,y0,G.u);fl("upwash",0,0,6,10.3,y0,G.u);
 fl("terrace",6,0,24.2,10.3,y0,G.u,courtMat);fl("terrace",0,10.3,24.2,12.3,y0,G.u,courtMat);
@@ -204,16 +204,16 @@ ol("Bike",33.8,4.4,19.6,"ox");ol("Coconut palm",33.6,13.6,16.2,"ox");ol("Tree",3
 ol("Drum by back door",11.6,4.6,-1.6,"ox");ol("Stairs up",3.5,7,-1.6,"ox");ol("Cement bags",36.9,3.1,22.9,"ox",G.xNow);ol("Black board · blocks sun",38.6,12.4,19.3,"ox",G.xNow);ol("Garden bed (outside wall)",39.9,3.4,2.9,"ox");ol("Clear roof sheets",27.4,12.2,9,"ox",G.xFix);
 
 /* upstairs */
-bx(22.3,y0,15,23.9,y0+2.5,19.4,wood,G.u);chair(20.9,17.2,-Math.PI/2,G.u,y0);
-bx(10.6,y0,15.6,16.6,y0+1.4,21,wood,G.u);bx(10.8,y0+1.4,15.8,16.4,y0+1.9,20.8,mattress,G.u);bx(10.8,y0+1.9,16.2,11.8,y0+2.3,17.8,white,G.u);
-bx(17.5,y0,20.3,20.7,y0+6,21.1,wood,G.u);for(let r=0;r<3;r++)for(let i=0;i<6;i++)bx(17.7+i*.48,y0+.6+r*1.9,20.45,18.05+i*.48,y0+1.9+r*1.9,20.95,clothes[(i+r)%5],G.u,false);
+bx(22.3,y0,13,23.9,y0+2.5,16.4,wood,G.u);chair(20.9,14.7,-Math.PI/2,G.u,y0);
 fan(17.1,y0+8.1,16.85,G.u);
-bx(13,y0+1.9,17.6,14.4,y0+2,18.6,black,G.uNow);[[14.8,16.4],[12,19.2]].forEach(([x,z],i)=>bx(x,y0+1.9,z,x+1.4,y0+2.5,z+1,clothes[i+2],G.uNow));
-bx(22.7,y0+2.5,16.4,23.5,y0+2.56,17.6,black,G.uFix);bx(23.45,y0+2.56,16.4,23.52,y0+3.4,17.6,black,G.uFix);bx(23,y0+2.5,15.3,23.5,y0+3.8,15.7,mari,G.uFix);
+bx(24.45,y0-.1,12.6,27.4,y0+.25,21.1,conc,G.u);fl("balcony",24.45,12.6,27.4,21.1,y0+.25,G.u,courtMat);
+for(let z=12.8;z<21.1;z+=.9)bx(27.15,y0+.37,z-.05,27.25,y0+3.4,z+.05,gateM,G.u);bx(27.1,y0+3.3,12.6,27.35,y0+3.5,21.1,gateM,G.u);
+[12.65,21.05].forEach(z=>bx(24.45,y0+3.3,z-.1,27.35,y0+3.5,z+.1,gateM,G.u));
+bx(22.7,y0+2.5,13.6,23.5,y0+2.56,14.8,black,G.uFix);bx(23.45,y0+2.56,13.6,23.52,y0+3.4,14.8,black,G.uFix);bx(23,y0+2.5,15.6,23.5,y0+3.8,16,mari,G.uFix);
 bx(.5,y0,18.6,3.2,y0+2.6,21,card,G.u);bx(6.8,y0,18.6,9.5,y0+2.6,21.1,card,G.u);cyl(2.5,3,.7,1.4,y0+.1,white,G.u);
 [[10,1.5],[20,1.5]].forEach(([x,z])=>bx(x-.1,y0,z-.1,x+.1,y0+6,z+.1,gateM,G.uFix));bx(10,y0+5.9,1.48,20,y0+5.95,1.52,black,G.uFix);
 [0,1,2,3,4].forEach(i=>bx(11+i*1.8,y0+3.6,1.45,12.2+i*1.8,y0+5.9,1.55,clothes[i],G.uFix,false));
-ol("Desk · face east",23,y0+4.7,17.2,"ou",G.u);ol("Bed",13.6,y0+3.6,18.3,"ou",G.u);ol("Bookshelf",19.1,y0+7,20.7,"ou",G.u);ol("Laptop on bed",13.7,y0+3.2,18.1,"ou",G.uNow);
+ol("Desk · face east",23,y0+4.7,14.7,"ou",G.u);ol("Balcony door",24,y0+8.2,19,"ou",G.u);ol("Door between rooms",10,y0+8.2,16.85,"ou",G.u);ol("Bath door",1.5,y0+8.2,10.6,"ou",G.u);ol("Loo door",4.5,y0+8.2,10.6,"ou",G.u);
 ol("Storage boxes",5,y0+4,19.8,"ou",G.u);ol("Drying line",15,y0+7.4,1.5,"ou",G.uFix);ol("Passage to your door",12,y0+3.2,11.3,"ou",G.u);
 
 /* lights */
@@ -235,7 +235,7 @@ zn.forEach((row,r)=>row.forEach((n,c)=>{const ne=r===0&&c===2,ctr=r===1&&c===1;
 lab(null,"North",10,3,-9,"c",scene,1,"#1f6f68");lab(null,"Road · east",51,2.5,9.5,"c",scene,1,"#5b6b7a");
 
 [["hall","Hall",18.8,6,15.8,"g"],["bed","Bedroom",18.8,6,5,"g"],["kitchen","Kitchen + pooja",6.7,6,15.8,"g"],["util","Utility",9.8,6,5,"g"],["bath","Bath",3,6,2.5,"g"],["toilet","Toilet",3,6,7.6,"g"],
- ["study","Your room",17.1,15.5,16.8,"u"],["room2","Room 2",5,15.5,16.8,"u"],["upwash","Washroom",3,15.5,5,"u"],["terrace","Terrace",15,13.5,5,"u"],
+ ["study","Your room",17.1,15.5,16.8,"u"],["room2","Room 2",5,15.5,16.8,"u"],["upwash","Bath + loo",3,15.5,5,"u"],["balcony","Balcony",25.9,13.6,16.85,"u"],["terrace","Terrace",15,13.5,5,"u"],
  ["court","Courtyard",31.5,13.5,9,"x"],["spass","South passage",12,12.5,23.1,"x"],["pass","Passage + stairs",8,8,-1.6,"x"]].forEach(a=>lab(a[0],a[1],a[2],a[3],a[4],a[5]));
 
 const sunC=D.createElement("canvas");sunC.width=sunC.height=128;{const g=sunC.getContext("2d"),gr=g.createRadialGradient(64,64,0,64,64,64);gr.addColorStop(0,"rgba(255,251,240,1)");gr.addColorStop(.16,"rgba(255,238,195,.95)");gr.addColorStop(.42,"rgba(255,205,130,.28)");gr.addColorStop(1,"rgba(255,190,110,0)");g.fillStyle=gr;g.fillRect(0,0,128,128)}
