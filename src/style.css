@@ -82,3 +82,12 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-of
 .note{color:var(--mute);font-size:14px;margin-top:14px}
 @media(max-width:600px){.steps li{grid-template-columns:auto 1fr}.steps .cost{grid-column:2;justify-self:start}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.corner{position:absolute;top:12px;right:12px;z-index:3;display:flex;gap:8px}
+.corner .tog{background:var(--glass);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
+.stage.hide .tools,.stage.hide .time{display:none}
+body.big{overflow:hidden}
+body.big .stage{position:fixed;inset:0;z-index:100;background:var(--bg)}
+body.big #view{height:100vh;height:100dvh;border-radius:0;box-shadow:none}
+body.big .tools{position:absolute;top:12px;left:12px;margin:0;width:min(300px,calc(100% - 24px));z-index:2}
+body.big .time{position:absolute;left:12px;right:12px;bottom:12px;margin:0;z-index:2}
+@media(max-width:759px){body.big .tools{top:60px}.corner .tog{min-height:36px;padding:4px 10px;font-size:13px}}
